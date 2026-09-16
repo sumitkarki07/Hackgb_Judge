@@ -1,0 +1,10 @@
+{
+  "name": "HackGB JudgeHub",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm",
+  "forwardPorts": [4173],
+  "portsAttributes": {
+    "4173": { "label": "JudgeHub mock preview", "onAutoForward": "notify" }
+  },
+  "postCreateCommand": "npm ci && npx playwright install chromium",
+  "customizations": { "vscode": { "extensions": ["dbaeumer.vscode-eslint"] } }
+}

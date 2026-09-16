@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.local/
+.env*
+!.env.example
+.clasp.json
+.clasprc.json
+*credentials*.json
+*secret*.json
+playwright-report/
+test-results/
+.DS_Store

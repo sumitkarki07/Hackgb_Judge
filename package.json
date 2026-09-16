@@ -1,0 +1,31 @@
+{
+  "name": "hackgb-judgehub",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Private Google Sheets-backed judging for HackGB",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/dev.mjs",
+    "test": "node --test tests/*.test.js",
+    "test:ui": "playwright test",
+    "check": "npm test && npm run build",
+    "setup": "bash scripts/setup.sh",
+    "push": "npm run build && clasp push",
+    "format": "prettier --write src/**/*.js src/ui/styles.css scripts/*.mjs tests/**/*.js playwright.config.js"
+  },
+  "dependencies": {
+    "jspdf": "^4.2.0",
+    "papaparse": "^5.5.3",
+    "qrcode": "^1.5.4"
+  },
+  "devDependencies": {
+    "@google/clasp": "^3.0.0",
+    "@playwright/test": "^1.56.0",
+    "esbuild": "^0.25.0",
+    "prettier": "^3.9.7"
+  }
+}
